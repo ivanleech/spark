@@ -29,6 +29,3 @@ print(mean)
 from pyspark.sql.functions import lit
 mydata2 = mydata2.withColumn('new_salary', when(mydata2.clean_salary.isNull(), lit(mean)).otherwise(mydata2.clean_salary))
 mydata2.show()
-
-import numpy as np
-latitudes = 
